@@ -14,7 +14,8 @@ interface Country {
 
 const app = express();
 const PORT = 3000;
-const API_URL = 'https://restcountries.com/v3.1/all';
+const API_URL = 'https://restcountries.com/v3.1/all?fields=name,flags';
+const API_URL_NAME = 'https://restcountries.com/v3.1/name/'
 
 // Rota para buscar e filtrar os países
 app.get('/countries', async (req: Request, res: Response) => {
@@ -47,6 +48,11 @@ app.get('/countries', async (req: Request, res: Response) => {
     }
 });
 
+app.get('/countries/:pais', async (req: Request<{pais:string}>, res: Response) => {
+    const response = await axios.get<Country[]>(API_URL_NAME + req.params.pais);
+    const countries: Country[] = response.data;
+    return res.json(countries)
+})
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });

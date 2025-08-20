@@ -24,7 +24,7 @@ async function main() {
 
   } catch (error) {
     if (error instanceof Error) {
-        console.error(`Erro: ${error.message}`);
+      console.error(`Erro: ${error.message}`);
     }
   }
 }

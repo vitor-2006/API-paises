@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { ICountry } from './interfaces'; // Certifique-se de que o caminho está correto
 
-const API_URL = 'https://restcountries.com/v3.1/all';
+const API_URL = 'https://restcountries.com/v3.1/all?fields=name,flags';
 
 export async function fetchAllCountries(): Promise<ICountry[]> {
   try {
