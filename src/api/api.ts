@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ICountry } from './interfaces'; // Certifique-se de que o caminho está correto
+import { ICountry } from '../interfaces/interfaces'; // Certifique-se de que o caminho está correto
 
 const API_URL = 'https://restcountries.com/v3.1/all?fields=name,flags';
 

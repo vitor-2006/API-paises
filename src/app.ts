@@ -1,6 +1,6 @@
-import { fetchAllCountries } from './api';
-import { CountryService } from './CountryService';
-import { Region } from './interfaces';
+import { fetchAllCountries } from './api/api';
+import { CountryService } from './services/CountryService';
+import { Region } from './interfaces/interfaces';
 
 async function main() {
   console.log('Buscando dados da API...');

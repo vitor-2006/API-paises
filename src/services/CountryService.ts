@@ -1,4 +1,4 @@
-import { ICountry, Region } from './interfaces';
+import { ICountry, Region } from '../interfaces/interfaces';
 
 export class CountryService {
   private countries: ICountry[] = [];
