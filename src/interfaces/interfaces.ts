@@ -19,3 +19,13 @@ export interface ICountry {
   flags: Flags;
   // Se precisar de mais propriedades, adicione aqui (ex: languages, currencies)
 }
+
+export interface Country {
+  name: {
+      common: string;
+      official: string;
+  };
+  region: string;
+  population: number;
+  // Adicione outras propriedades relevantes que você queira usar
+}
